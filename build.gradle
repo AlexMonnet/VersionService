@@ -1,0 +1,29 @@
+buildscript {
+  repositories {
+    mavenCentral()
+  }
+  //dependencies {
+  //  classpath ""
+  //}
+}
+
+apply plugin: "application"
+apply plugin: "java"
+
+group = "com.monnet"
+version = "0.0.0"
+
+jar {
+  baseName = "versionService"
+}
+
+repositories {
+  mavenCentral()
+}
+
+//dependencies {
+//  testCompile ""
+//} 
+
+mainClassName = "todo"
+
