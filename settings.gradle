@@ -1,1 +1,4 @@
-rootProject.name = "versionService"
+rootProject.name = "version-service"
+
+include ('version-number')
+include ('web-service')

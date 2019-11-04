@@ -1,0 +1,12 @@
+apply plugin: "java"
+apply plugin: "application"
+
+mainClassName = "com.monnet.webservice.Application"
+
+jar {
+  baseName = "version-service"
+}
+
+dependencies {
+    compile project(':version-number')
+}
