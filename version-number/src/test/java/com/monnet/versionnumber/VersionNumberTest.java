@@ -9,7 +9,7 @@ public class VersionNumberTest {
         final VersionNumber sourceVersionNumber = new VersionNumber("2.1");
         final VersionNumber targetVersionNumber = new VersionNumber("2.2");
         final int versionNumberComparison = sourceVersionNumber.compareTo(targetVersionNumber);
-        Assert.assertEquals(-1, versionNumberComparison);
+        Assert.assertEquals(versionNumberComparison, -1);
     }
 
     @Test
@@ -17,7 +17,7 @@ public class VersionNumberTest {
         final VersionNumber sourceVersionNumber = new VersionNumber("2.2");
         final VersionNumber targetVersionNumber = new VersionNumber("2.1");
         final int versionNumberComparison = sourceVersionNumber.compareTo(targetVersionNumber);
-        Assert.assertEquals(1, versionNumberComparison);
+        Assert.assertEquals(versionNumberComparison, 1);
     }
 
     @Test
@@ -25,7 +25,7 @@ public class VersionNumberTest {
         final VersionNumber sourceVersionNumber = new VersionNumber("2.2");
         final VersionNumber targetVersionNumber = new VersionNumber("2.2");
         final int versionNumberComparison = sourceVersionNumber.compareTo(targetVersionNumber);
-        Assert.assertEquals(0, versionNumberComparison);
+        Assert.assertEquals(versionNumberComparison, 0);
     }
 
     @Test
@@ -33,7 +33,7 @@ public class VersionNumberTest {
         final VersionNumber sourceVersionNumber = new VersionNumber("2.1.1");
         final VersionNumber targetVersionNumber = new VersionNumber("2.2");
         final int versionNumberComparison = sourceVersionNumber.compareTo(targetVersionNumber);
-        Assert.assertEquals(-1, versionNumberComparison);
+        Assert.assertEquals(versionNumberComparison, -1);
     }
 
     @Test
@@ -41,7 +41,7 @@ public class VersionNumberTest {
         final VersionNumber sourceVersionNumber = new VersionNumber("2.2.2");
         final VersionNumber targetVersionNumber = new VersionNumber("2.1");
         final int versionNumberComparison = sourceVersionNumber.compareTo(targetVersionNumber);
-        Assert.assertEquals(1, versionNumberComparison);
+        Assert.assertEquals(versionNumberComparison, 1);
     }
 
     @Test
@@ -49,7 +49,7 @@ public class VersionNumberTest {
         final VersionNumber sourceVersionNumber = new VersionNumber("2.2.0");
         final VersionNumber targetVersionNumber = new VersionNumber("2.2");
         final int versionNumberComparison = sourceVersionNumber.compareTo(targetVersionNumber);
-        Assert.assertEquals(0, versionNumberComparison);
+        Assert.assertEquals(versionNumberComparison, 0);
     }
 
     @Test
@@ -57,7 +57,7 @@ public class VersionNumberTest {
         final VersionNumber sourceVersionNumber = new VersionNumber("2.1");
         final VersionNumber targetVersionNumber = new VersionNumber("2.2.2");
         final int versionNumberComparison = sourceVersionNumber.compareTo(targetVersionNumber);
-        Assert.assertEquals(-1, versionNumberComparison);
+        Assert.assertEquals(versionNumberComparison, -1);
     }
 
     @Test
@@ -65,7 +65,7 @@ public class VersionNumberTest {
         final VersionNumber sourceVersionNumber = new VersionNumber("2.2");
         final VersionNumber targetVersionNumber = new VersionNumber("2.1.1");
         final int versionNumberComparison = sourceVersionNumber.compareTo(targetVersionNumber);
-        Assert.assertEquals(1, versionNumberComparison);
+        Assert.assertEquals(versionNumberComparison, 1);
     }
 
     @Test
@@ -73,6 +73,6 @@ public class VersionNumberTest {
         final VersionNumber sourceVersionNumber = new VersionNumber("2.2");
         final VersionNumber targetVersionNumber = new VersionNumber("2.2.0");
         final int versionNumberComparison = sourceVersionNumber.compareTo(targetVersionNumber);
-        Assert.assertEquals(0, versionNumberComparison);
+        Assert.assertEquals(versionNumberComparison, 0);
     }
 }
