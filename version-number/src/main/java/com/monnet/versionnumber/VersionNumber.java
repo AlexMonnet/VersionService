@@ -1,5 +1,7 @@
-package com.monnet.versionservice;
+package com.monnet.versionnumber;
 
+import java.util.Arrays;
+import java.util.List;
 
 public class VersionNumber implements Comparable<VersionNumber> {
 
@@ -25,6 +27,21 @@ public class VersionNumber implements Comparable<VersionNumber> {
     @Override
     public int compareTo(VersionNumber otherVersionNumber){ 
         int comparisonValue = 0;
+        final String sourceVersionNumberString = this.versionNumberString;
+        final String targetVersionNumberString = otherVersionNumber.getVersionNumberString();
+
+        if(sourceVersionNumberString.equals(targetVersionNumberString)){
+            comparisonValue = 0;
+        } else {
+            final List<String> sourceSplitVersionList = Arrays.asList(this.versionNumberString.split("."));
+            final List<String> targetSplitVersionList = Arrays.asList(this.versionNumberString.split("."));
+            final int minNumberOfDots = Math.min(sourceSplitVersionList.size(), targetSplitVersionList.size());
+
+            for(int i = 0; i < minNumberOfDots; i++){
+                
+            }
+        }
+
         return comparisonValue;
     }
 }
