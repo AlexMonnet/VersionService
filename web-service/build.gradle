@@ -7,6 +7,18 @@ jar {
   baseName = "version-service"
 }
 
+repositories {
+  mavenCentral()
+}
+
+processResources {
+    expand(project.properties)
+}
+
 dependencies {
     compile project(':version-number')
+    compile "org.springframework.boot:spring-boot-starter-parent:2.1.2.RELEASE"
+    compile "org.springframework.boot:spring-boot-starter-web:2.1.2.RELEASE"
+    compile "org.springframework.boot:spring-boot-starter-actuator:2.1.2.RELEASE"
+    testCompile "org.springframework.boot:spring-boot-starter-test:2.1.2.RELEASE"
 }

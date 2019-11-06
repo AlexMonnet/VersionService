@@ -1,0 +1,10 @@
+application:
+  version: 1.0.0
+
+server:
+  port: 3004
+
+spring:
+  output:
+    ansi:
+      enabled: ALWAYS
