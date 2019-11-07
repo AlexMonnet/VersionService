@@ -1,7 +1,6 @@
 package com.monnet.versionnumber;
 
 import org.testng.Assert;
-import org.testng.annotations.*;
 import org.testng.annotations.Test;
 
 public class VersionNumberTest {
