@@ -68,6 +68,13 @@ public class VersionNumber implements Comparable<VersionNumber>
         return comparisonValue;
     }
 
+    /**
+     * Removes zeros from the end of a list of integers. This ensures the last element of 
+     *  a list is a non-zero value.
+     * 
+     * @param splitVersionStringList A list of integers as strings.
+     * @return A list of integers as strings where the last element is a non-zero value.
+     */
     private List<String> removeTrailingZeroVersionIdentifiers(List<String> splitVersionStringList)
     {
         final List<String> cleanedSplitVersionStringList = new ArrayList<>(splitVersionStringList);
