@@ -2,9 +2,9 @@ package com.monnet.webservice;
 
 import com.monnet.webservice.VersionNumberService;
 import com.monnet.webservice.VersionNumberServiceImpl;
-
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
 
 public class VersionNumberServiceTest {
 
@@ -12,6 +12,18 @@ public class VersionNumberServiceTest {
     // while using the @autowire in a reasonable time.
     private VersionNumberService service = new VersionNumberServiceImpl();
 
+    @Test
+    public void testVersionNumberServiceImpl_compareVersions_before_userRequirement() {
+        final String comparisonString = service.compareVersions("1.0.0", "1.0.1");
+        Assert.assertEquals(comparisonString, "before");
+    }
+
+    @Test
+    public void testVersionNumberServiceImpl_compareVersions_after_userRequirement() {
+        final String comparisonString = service.compareVersions("2.0", "1.0.0");
+        Assert.assertEquals(comparisonString, "after");
+    }
+    
     @Test
     public void testVersionNumberServiceImpl_compareVersions_before() {
         final String comparisonString = service.compareVersions("2.1", "2.2");
