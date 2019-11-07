@@ -17,10 +17,7 @@ processResources {
 
 dependencies {
     compile project(':version-number')
-    compile "org.springframework.boot:spring-boot-starter-parent:${versionSpringBoot}"
     compile "org.springframework.boot:spring-boot-starter-web:${versionSpringBoot}"
-    compile "org.springframework.boot:spring-boot-starter-actuator:${versionSpringBoot}"
-    testCompile "org.springframework.boot:spring-boot-starter-test:${versionSpringBoot}"
     testCompile 'org.testng:testng:7.0.0'
 }
 
