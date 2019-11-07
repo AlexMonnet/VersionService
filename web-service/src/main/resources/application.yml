@@ -2,7 +2,7 @@ application:
   version: 0.0.1
 
 server:
-  port: 3004
+  port: 8080
 
 spring:
   output:
