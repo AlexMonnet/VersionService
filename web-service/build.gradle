@@ -21,7 +21,6 @@ dependencies {
     compile "org.springframework.boot:spring-boot-starter-web:${versionSpringBoot}"
     compile "org.springframework.boot:spring-boot-starter-actuator:${versionSpringBoot}"
     testCompile "org.springframework.boot:spring-boot-starter-test:${versionSpringBoot}"
-    testCompile 'junit:junit:4.11'
     testCompile 'org.testng:testng:7.0.0'
 }
 
