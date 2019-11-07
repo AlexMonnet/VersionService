@@ -3,7 +3,6 @@ package com.monnet.webservice;
 import com.monnet.versionnumber.VersionNumber;
 import org.springframework.stereotype.Service;
 
-
 @Service
 public class VersionNumberServiceImpl implements VersionNumberService {
     public VersionNumberServiceImpl() {
@@ -13,19 +12,16 @@ public class VersionNumberServiceImpl implements VersionNumberService {
     public String compareVersions(final String sourceVersionString, final String targetVersionString) {
 
         final String returnString;
-        if (!sourceVersionString.matches("^([\\.]|[0-9])+$"))
-        {
+        if (!sourceVersionString.matches("^([\\.]|[0-9])+$")) {
             returnString = "Error: Source version contains invalid characters.";
-        } else if (!targetVersionString.matches("^([\\.]|[0-9])+$"))
-        {
+        } else if (!targetVersionString.matches("^([\\.]|[0-9])+$")) {
             returnString = "Error: Target version contains invalid characters.";
-        } else 
-        {
+        } else {
             final VersionNumber sourceVersion = new VersionNumber(sourceVersionString);
             final VersionNumber targetVersion = new VersionNumber(targetVersionString);
-    
+
             int comparisonValue = sourceVersion.compareTo(targetVersion);
-    
+
             switch (comparisonValue) {
             case -1:
                 returnString = "before";
@@ -41,7 +37,7 @@ public class VersionNumberServiceImpl implements VersionNumberService {
                 break;
             }
         }
-        
+
         return returnString;
     }
 }
