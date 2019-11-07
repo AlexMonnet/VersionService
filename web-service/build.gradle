@@ -17,8 +17,15 @@ processResources {
 
 dependencies {
     compile project(':version-number')
-    compile "org.springframework.boot:spring-boot-starter-parent:2.1.2.RELEASE"
-    compile "org.springframework.boot:spring-boot-starter-web:2.1.2.RELEASE"
-    compile "org.springframework.boot:spring-boot-starter-actuator:2.1.2.RELEASE"
-    testCompile "org.springframework.boot:spring-boot-starter-test:2.1.2.RELEASE"
+    compile "org.springframework.boot:spring-boot-starter-parent:${versionSpringBoot}"
+    compile "org.springframework.boot:spring-boot-starter-web:${versionSpringBoot}"
+    compile "org.springframework.boot:spring-boot-starter-actuator:${versionSpringBoot}"
+    testCompile "org.springframework.boot:spring-boot-starter-test:${versionSpringBoot}"
+    testCompile 'junit:junit:4.11'
+    testCompile 'org.testng:testng:7.0.0'
+}
+
+test {
+    useTestNG()
+    testLogging.showStandardStreams = true
 }

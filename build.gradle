@@ -1,14 +1,19 @@
 buildscript {
+  ext {
+    versionSpringBoot = "2.1.2.RELEASE"
+  }
   repositories {
     mavenCentral()
   }
-  //dependencies {
-  //  classpath ""
-  //}
+  dependencies {
+    classpath "org.springframework.boot:spring-boot-gradle-plugin:${versionSpringBoot}"
+  }
 }
 
 group = "com.monnet"
 version = "0.0.0"
+
+apply plugin: "org.springframework.boot"
 
 repositories {
   mavenCentral()
